@@ -1,8 +1,50 @@
 ﻿
+@Model Introducao.Models.Pessoa
 @{
     ViewBag.Title = "Index";
 }
+<html>
+<body>
+    <h2>Intro MVC</h2>
+    <p>Curso intro MVC</p>
+    <br />
+    <br />
+    <p>@ViewData["PessoaId"]</p>
+    <p>@ViewData["Nome"]</p>
+    <p>@ViewData["Tipo"]</p>
+    <br />
+    <br />
+    <p>@ViewBag.PessoaId</p>
+    <p>@ViewBag.Nome</p>
+    <p>@ViewBag.Tipo</p>
 
-<h2>Intro MVC</h2>
-<p>Curso intro MVC</p>
+    <p>@Model.PessoaId  </p>
+    <p>@Model.Nome </p>
+    <p>@Model.Tipo </p>
 
+    <form action="Home/Lista" method="POST">
+        <fieldset>
+            <legend>Informação de Pessoas</legend>
+        </fieldset>
+        <div>
+            <label for="PessoaId">Código</label>
+        </div>
+        <div>
+            <input type="number" value="@Model.PessoaId" name="PessoaId" />
+        </div>
+        <div>
+            <label for="Nome">Nome</label>
+        </div>
+        <div>
+            <input type="text" value="@Model.Nome" name="Nome" />
+        </div>
+        <div>
+            <label for="Tipo">Tipo</label>
+        </div>
+        <div>
+            <input type="text" value="@Model.Tipo" name="Tipo" />
+        </div>
+        <p><input type="submit" value="Enviar" /></p>
+    </form>
+</body>
+</html>
