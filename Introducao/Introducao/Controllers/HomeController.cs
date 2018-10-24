@@ -60,7 +60,7 @@ namespace Introducao.Controllers
             ViewData["PessoaId"] = p.PessoaId;
             ViewData["Nome"] = p.Nome;
             ViewData["Tipo"] = p.Tipo;
-            return View();
+            return View(p);
         }
 
 

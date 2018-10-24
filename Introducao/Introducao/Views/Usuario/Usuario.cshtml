@@ -1,0 +1,46 @@
+﻿@model Introducao.Models.Usuario
+@{
+    ViewBag.Title = "Usuario";
+}
+
+<h2>Usuario</h2>
+
+<h2>Validação de Usuários</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<fieldset>
+    <legend>Dados do Usuário</legend>
+    <div class="editor-label">
+        @Html.LabelFor(s => s.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(s => s.Nome)
+        @Html.ValidationMessageFor(s => s.Nome)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(s => s.Email)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(s => s.Nome)
+        @Html.ValidationMessageFor(s => s.Nome)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(s => s.Idade)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(s => s.Idade)
+        @Html.ValidationMessageFor(s => s.Idade)
+    </div>
+       
+    <div class="editor-label">
+        @Html.LabelFor(s => s.Observacao)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(s => s.Observacao)
+        @Html.ValidationMessageFor(s => s.Observacao)
+    </div>
+</fieldset>
+}
