@@ -28,13 +28,30 @@
     </div>
 
     <div class="editor-label">
+        @Html.LabelFor(s => s.Login)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(s => s.Login)
+        @Html.ValidationMessageFor(s => s.Login)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(s => s.Senha)
+    </div>
+    <div class="editor-field">
+        @Html.PasswordFor(s => s.Senha)
+        @Html.ValidationMessageFor(s => s.Senha)
+    </div>
+
+    <div class="editor-label">
         @Html.LabelFor(s => s.Idade)
     </div>
     <div class="editor-field">
         @Html.EditorFor(s => s.Idade)
         @Html.ValidationMessageFor(s => s.Idade)
     </div>
-       
+
+
     <div class="editor-label">
         @Html.LabelFor(s => s.Observacao)
     </div>
@@ -42,5 +59,17 @@
         @Html.TextAreaFor(s => s.Observacao)
         @Html.ValidationMessageFor(s => s.Observacao)
     </div>
+    <div class="editor-label">
+        @Html.LabelFor(s => s.ConfirmarSenha)
+    </div>
+    <div class="editor-field">
+        @Html.PasswordFor(s => s.ConfirmarSenha)
+        @Html.ValidationMessageFor(s => s.ConfirmarSenha)
+    </div>
+    <br />
+    <p><input type="submit" value="Cadastrar" /></p>
 </fieldset>
 }
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")}
